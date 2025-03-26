@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>调查问卷</title>
+  <style>
+    /* 基础的样式设置 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px;
+      align-items: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    .label1{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 50%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <form>
+    <h1>调查问卷</h1>
+
+    <!-- 姓名输入框 -->
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" placeholder="请输入您的姓名">
+
+    <!-- 年龄输入框 -->
+    <label for="age">年龄：</label>
+    <input type="number" id="age" name="age" placeholder="请输入您的年龄">
+
+    <!-- 性别选择（单选按钮） -->
+    <label>性别：</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male" class="label1">男</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female" class="label1">女</label>
+
+    <!-- 兴趣选择（复选框） -->
+    <label>兴趣爱好：</label>
+    <input type="checkbox" id="sports" name="hobby" value="sports">
+    <label for="sports" class="label1">运动</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading" class="label1">阅读</label>
+
+    <!-- 提交按钮 -->
+    <button type="submit" id="myButton">提交</button>
+    <script>
+    const button = document.getElementById("myButton");  // 选择按钮
+    button.addEventListener("click", function() {        // 添加点击事件监听
+      alert("谢谢参与！");
+    });
+    </script>
+  </form>
+
+</body>
+</html>
