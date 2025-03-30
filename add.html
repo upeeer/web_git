@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加法器</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 设置body的高度为视口高度的100%，以确保内容垂直居中 */
+  margin: 0; /* 移除默认的margin */
+}
+
+form {
+  margin: 20px;
+  text-align: center; /* 添加此行以使表单内容居中 */
+}
+
+h1 {
+  text-align: center; /* 添加此行以使h1文本居中 */
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  text-align: center; /* 添加此行以使label文本居中 */
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center; /* 添加此行以使输入框中的数字居中 */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  display: block; /* 添加此行以使按钮独占一行 */
+  width: 100%; /* 可以根据需要调整按钮宽度 */
+  text-align: center; /* 如果按钮内有文本，也可以使其居中 */
+}
+
+    </style>
+
+</head>
+<body>
+<h1>加法器</h1>
+<form>
+    <label for="add1">加数1</label>
+    <input type="text" id="add1" name="add1" >
+    <label for="add2">加数2：</label>
+    <input type="text" id="add2" name="add2" >
+    <button type="button" onclick="add_submit()" id="addition" >求和</button>
+  <script>
+
+
+function add_submit()
+{
+  let num1 = document.getElementById('add1').value;
+  let n1 = parseFloat(num1); // 修改这里
+  let num2 = document.getElementById('add2').value;
+  let n2 = parseFloat(num2); // 修改这里
+  if (isNaN(num1) || isNaN(num2)) {
+  console.error("请输入有效的数字");
+}
+  else alert(n1+n2)
+  if (!isNaN(n1) && !isNaN(n2)) { // 添加检查以确保它们是数字
+    var sum = n1 + n2;
+    alert(sum);
+  } else {
+    alert('请输入有效的数字！');
+  }
+}
+
+
+
+  </script>
+    </form>
+</body>
+</html>
